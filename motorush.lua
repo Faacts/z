@@ -84,8 +84,8 @@ RunService.Stepped:Connect(function()
 	end
 end)
 local speedSection = vehiclePage:addSection("Acceleration")
-local velocityMult = 0.025;
-speedSection:addSlider("Multiplier (Thousandths)", 25, 0, 50, function(v) velocityMult = v / 2; end)
+local velocityMult = 0.01;
+speedSection:addSlider("Multiplier (Thousandths)", 25, 0, 50, function(v) velocityMult = v / 5000; end)
 local velocityEnabledKeyCode = Enum.KeyCode.W;
 speedSection:addKeybind("Velocity Enabled", velocityEnabledKeyCode, function()
 	if not velocityEnabled then
